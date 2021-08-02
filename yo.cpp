@@ -148,41 +148,6 @@ inline namespace __SarcasticMonk {
 void test_case(int tc) {  
 
 
-    string s;
-    cin >> s;
-
-    int ind = -1;
-    int n = s.size();
-    for(int i=0; i<n; i++) {
-        if(s[i] == 'a') {
-            ind = i;
-        } 
-    }
-
-
-    if(n > 26 || ind == -1) {
-        NO;
-        return ;
-    }
-
-    int len = 1;
-    int left = ind-1, right = ind+1;
-    char x = 'b';
-    while(len < n) {
-        if(left >= 0 && s[left] == x) {
-            left--;
-        } else if(right < n && s[right] == x) {
-            right++;
-        } else {
-            NO;
-            return;
-        }
-        x++;
-        len++;
-    }
-
-    YES;
-
 
 }
  
